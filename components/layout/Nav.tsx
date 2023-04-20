@@ -5,10 +5,10 @@ import SSWU from '@/public/SSWU.svg'
 import Link from "next/link"
 
 const Container = styled.div`
-    padding: 10px;
+    padding: 50px;
     background-color: white;
     width: 100%;
-    height: 47px;
+    height: 130px;
     display: flex;
 	justify-content: space-between;
 	align-item: center;

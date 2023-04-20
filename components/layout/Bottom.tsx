@@ -6,7 +6,7 @@ import styled from "styled-components"
 const Container = styled.div`
     background-color: white;
     width: 100%;
-    padding: 10px;
+    padding: 50px;
 `
 const Line = styled.div`
     background-color: black;

@@ -5,7 +5,7 @@ import GDSC from "@/public/GDSC.svg"
 import Button from "../common/button"
 
 const Container = styled.div`
-    height: 690px;
+    height: 590px;
     background-color: white;
 `
 const Contents = styled.div`
@@ -14,7 +14,7 @@ const Contents = styled.div`
     width: fit-content;
     height: fit-content;
     display: flex;
-    padding-top: 180px;
+    padding-top: 120px;
 `
 const ImageContainer = styled.div` 
     width: 411px;
