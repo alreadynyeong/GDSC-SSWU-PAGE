@@ -17,10 +17,10 @@ const Contents = styled.div`
     padding-top: 180px;
 `
 const ImageContainer = styled.div` 
-    width: fit-content;
-    height: fit-content;
+    width: 411px;
+    height: 335px;
     border-radius: 0px 0px 0px 106px;
-    // border: 1px solid red;
+    border: 1px solid red;
     overflow: hidden;
     margin-left: 100px;
 `
@@ -58,7 +58,7 @@ const HomeTop = () => {
                     </ButtonBox>
                 </div>
                 <ImageContainer>
-                    <Image src="/public/flower.png" alt={""} width={411} height={335}/>
+                    {/* <Image src="/public/flower.png" alt={""} width={411} height={335}/> */}
                 </ImageContainer>
             </Contents>
         </Container>
