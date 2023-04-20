@@ -1,5 +1,5 @@
 import React from "react"
-import { NavBarMenus, Routes } from "@/constants/Route"
+import { NavBarMenus } from "@/constants/Route"
 import styled from "styled-components"
 import SSWU from '@/public/SSWU.svg'
 import Link from "next/link"
