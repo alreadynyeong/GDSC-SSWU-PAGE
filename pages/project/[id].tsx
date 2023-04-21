@@ -1,6 +1,7 @@
 import Introduce from "@/components/project/Introduce";
 import styled from "styled-components";
 import { useRouter } from 'next/router';
+import { TEAMS } from "@/constants/Teams";
 
 const Container = styled.div`
     background-color: white;
@@ -31,6 +32,7 @@ const Info = styled.div`
 const Detail = () => {
     const router = useRouter();
     const team = router.query.id;
+    const data = TEAMS.find(v=>v.team==team)
     return (
         <Container>
             <Introduce title={"SOLUTION CHALLENGE"} 
@@ -38,9 +40,8 @@ const Detail = () => {
             <Title>TEAM {team}</Title>
             <ImageBox></ImageBox>
             <Info>
-                <div>"앱 이름"</div>
-                <p>This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.comThis is a template Figma file, turned into code using Anima. Learn more at AnimaApp.comThis is a template Figma file, turned into code using Anima. Learn more at AnimaApp.comThis is a template Figma file, turned into code using Anima. Learn more at AnimaApp.comThis is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com                    
-                </p>
+                <div>"{data?.name}"</div>
+                <p>{data?.content}</p>
             </Info>
         </Container>
     )
