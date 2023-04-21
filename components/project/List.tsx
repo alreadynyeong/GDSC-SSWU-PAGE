@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Link from "next/link";
 import { TEAMS } from "@/constants/Teams";
 
 const Container = styled.div`
@@ -44,11 +45,13 @@ const List = () => {
             <Title>OUT PRODUCT</Title>
             <Items>
                 {TEAMS.map((t)=>(
-                    <ItemContainer key={t.team}>
-                        <TeamImage></TeamImage>
-                        <TeamName>{t.team} TEAM</TeamName>
-                        <TeamMember>{t.member}</TeamMember>
-                    </ItemContainer>
+                    <Link href={`/project/${t.team}`} key={t.team}>
+                        <ItemContainer>
+                            <TeamImage></TeamImage>
+                            <TeamName>{t.team} TEAM</TeamName>
+                            <TeamMember>{t.member}</TeamMember>
+                        </ItemContainer>
+                    </Link>
                 ))}
             </Items>
         </Container>
