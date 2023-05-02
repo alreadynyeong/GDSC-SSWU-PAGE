@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Container = styled.div`
     height: 690px;
     background-color: white;
-   
+    padding: 10px;
 `
 const ContentBox = styled.div`
     width: 830px;
