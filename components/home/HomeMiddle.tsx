@@ -9,6 +9,7 @@ const Container = styled.div`
     height: 680px;
     background-color: #F2F2F2;
     text-align: center;
+    overflow: scroll;
 `
 const Title = styled.div`
     font-size: 48px;
