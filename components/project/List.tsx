@@ -5,11 +5,15 @@ import { TEAMS } from "@/constants/Teams";
 
 const Container = styled.div`
     background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 1px 2px 5px 0.2px lightgray;
 `
 const Title = styled.h1`
     width: fit-content; 
     margin: 0 auto;
-    color: black;
+    color: #0F9D58;
+    margin-bottom: 30px;
 `
 const Items = styled.div`
     display: flex;

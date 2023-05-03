@@ -4,7 +4,15 @@ import { useRouter } from 'next/router';
 import { TEAMS } from "@/constants/Teams";
 
 const Container = styled.div`
-    background-color: white;
+    background-color: #F3FAF6;
+    padding: 40px;
+    padding-top: 200px;
+`
+const TeamBox = styled.div`
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 1px 2px 5px 0.2px lightgray;
 `
 const ImageBox = styled.div`
     max-width: 1120px;
@@ -37,12 +45,14 @@ const Detail = () => {
         <Container>
             <Introduce title={"SOLUTION CHALLENGE"} 
         content={"This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.comThis is a template Figma file, turned into code using Anima. Learn more at AnimaApp.comThis is a template Figma file, turned into code using Anima. Learn more at AnimaApp.comThis is a template Figma file, turned into code using Anima. Learn more at AnimaApp.comThis is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com"}/>
-            <Title>TEAM {team}</Title>
-            <ImageBox></ImageBox>
-            <Info>
-                <div>"{data?.name}"</div>
-                <p>{data?.content}</p>
-            </Info>
+            <TeamBox>
+                <Title>TEAM {team}</Title>
+                <ImageBox></ImageBox>
+                <Info>
+                    <div>"{data?.name}"</div>
+                    <p>{data?.content}</p>
+                </Info>
+            </TeamBox>
         </Container>
     )
 }

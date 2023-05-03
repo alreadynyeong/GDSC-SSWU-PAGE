@@ -3,13 +3,14 @@ import styled from "styled-components";
 
 const Container = styled.div`
     height: 300px;
-    background-color: white;
+    background-color: #F3FAF6;
     padding-top: 20px;
 `
 const Title = styled.h1`
     width: fit-content; 
     margin: 0 auto;
     padding-bottom: 30px;
+    color: #0F9D58;
 `
 const Content = styled.p`
     width: 600px;
