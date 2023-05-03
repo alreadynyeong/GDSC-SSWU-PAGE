@@ -12,16 +12,24 @@ const Container = styled.div`
     display: flex;
 	justify-content: space-between;
 	align-item: center;
+    position: fixed;
+    box-shadow: 5px 0.2px 5px 1px lightgray;
 `
 const MenuContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-item: center;
-    gap: 50px
+    gap: 50px;
+    padding-left: 50px;
 `
 const Menu = styled.div`
+    width: fit-content;
+    height: fit-content;
     display: flex;
     align-items: center;
+    border-radius: 51px;
+    border: 1px solid;
+    padding: 10px;
 `
 const Nav = () => {
     return (
@@ -31,7 +39,9 @@ const Nav = () => {
             </div>
             <MenuContainer>
                 {NavBarMenus.map((menu)=>(
-                    <Menu key={menu.route}>
+                    <Menu
+                    style={{borderColor: menu.color}}  
+                    key={menu.route}>
                         <Link href={menu.route} passHref>
                             <div>{menu.title}</div>
                         </Link>
