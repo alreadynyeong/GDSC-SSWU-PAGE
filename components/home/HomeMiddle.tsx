@@ -7,7 +7,7 @@ import { HomeParts } from "@/constants/Part";
 
 const Container = styled.div`
     height: 680px;
-    background-color: #F2F2F2;
+    background-color: #F3FAF6;
     text-align: center;
     overflow: scroll;
 `
@@ -15,6 +15,7 @@ const Title = styled.div`
     font-size: 48px;
     font-weight: bold;
     padding: 90px;
+    color: #0F9D58;
 `
 const PartBox = styled.div`
     display: flex;

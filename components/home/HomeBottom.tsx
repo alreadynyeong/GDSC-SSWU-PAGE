@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 const Container = styled.div`
     height: 690px;
-    background-color: white;
-    padding: 10px;
+    background-color: #FEF5F5;
+    padding: 40px;
 `
 const ContentBox = styled.div`
     width: 830px;
@@ -34,6 +34,12 @@ const TextBox = styled.div`
         padding-left:10px;
     }
 `
+const Title = styled.p`
+    color: #EA4335;
+    font-size: 48px;
+    font-weight: bold;
+
+`
 
 const HomeBottom = () => {
     return (
@@ -41,7 +47,7 @@ const HomeBottom = () => {
             <ContentBox>
                 <ImageContainer/>
                 <TextBox>
-                    <h1>HIGHLIGHT</h1>
+                    <Title>HIGHLIGHT</Title>
                     <p>GDSC 성신여대에서 한 활동 중 가장 성과가 좋거나, 대표될 수 있는 결과물을 넣으면 좋을 것 같습니다. </p>
                 </TextBox>
             </ContentBox>
