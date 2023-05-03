@@ -1,12 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import GDSC from "@/public/GDSC.svg"
+import Developer from "@/public/Developer.svg"
 
 const Container = styled.div`
     height: 740px;
     display: flex;
     overflow: scroll;
     padding: 10px;
+    background-color: #FFFFFF;
+    padding: 40px;
 `
 const Contents = styled.div`
     margin: 0 auto;
@@ -37,19 +40,16 @@ const Small = styled.div`
 `
 const LogoBox = styled.div`
     display: flex;
-    gap: 10px;
-    > div {
-        background-color: white;
-        width: 92px;
-        height: 96px;
-        padding: 20px;
+    >div {
+        margin-top: 37px;
+        margin-right: 10px;
     }
 `
 const ImageBox = styled.div`
     border: 1px solid red;
     width: 461px;
-    height: 544px;
-    margin-top: 66px;
+    height: 392px;
+    margin: 20px;
 `
 const AboutTop = () => {
     return (
@@ -65,8 +65,7 @@ const AboutTop = () => {
                     </Small>
                     <LogoBox>
                         <div><GDSC /></div>
-                        <div><GDSC /></div>
-                        <div><GDSC /></div>
+                        <Developer/>
                     </LogoBox>
                 </Info>
                 <ImageBox>
