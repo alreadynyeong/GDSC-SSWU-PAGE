@@ -4,7 +4,7 @@ import styled from "styled-components"
 const StyeldButton = styled.button`
     height: 39px;
     padding: 0px 10px 0px 10px;
-    background-color: black;
+    border-radius: 42px;
     border: none;
     color: white;
     font-size: 16px;
@@ -14,11 +14,11 @@ const StyeldButton = styled.button`
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>{
     children: string;
     onClick: ()=>void;
-    
+    color: string;
 }
 
-const Button = ({ children, onClick }: ButtonProps)=>{
-    return <StyeldButton onClick={onClick}>{children}</StyeldButton>
+const Button = ({ children, onClick, color }: ButtonProps)=>{
+    return <StyeldButton style={{backgroundColor: color}} onClick={onClick}>{children}</StyeldButton>
 };
 
 export default Button;

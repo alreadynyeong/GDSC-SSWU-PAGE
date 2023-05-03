@@ -8,7 +8,7 @@ const Container = styled.div`
     height: 590px;
     background-color: white;
     overflow: scroll;
-    padding: 10px;
+    padding: 50px;
 `
 const Contents = styled.div`
     margin: 0 auto;
@@ -59,8 +59,8 @@ const HomeTop = () => {
                         <p>총 29명의 성신여대 학생으로 이루어진 GDSC SSWU 4기는 다양한 주제의 프로젝트와 스터디를 진행하였으며, 각종 Google Korea 행사에 참여하였습니다.</p>
                     </Small>
                     <ButtonBox>
-                        <Button onClick={()=>{console.log("contact")}}>CONTACT US</Button>
-                        <Button onClick={()=>{console.log("join")}}>JOIN US</Button>
+                        <Button color="#4285F4" onClick={()=>{console.log("contact")}}>CONTACT US</Button>
+                        <Button color="#0F9D58" onClick={()=>{console.log("join")}}>JOIN US</Button>
                     </ButtonBox>
                 </div>
                 <ImageContainer>
