@@ -30,7 +30,7 @@ const ItemContainer = styled.div`
 const TeamImage = styled.div`
     width: 250px;
     height: 309px;
-    border: 1px solid black;
+    // border: 1px solid black;
     margin: 0 auto;
 `
 const TeamName = styled.div`
@@ -51,7 +51,9 @@ const List = () => {
                 {TEAMS.map((t)=>(
                     <Link href={`/project/${t.team}`} key={t.team}>
                         <ItemContainer>
-                            <TeamImage></TeamImage>
+                            <TeamImage>
+                                <img src={`/Teams/${t.team}1.png`} alt={""} width={250} height={309}/>
+                            </TeamImage>
                             <TeamName>{t.team} TEAM</TeamName>
                             <TeamMember>{t.member}</TeamMember>
                         </ItemContainer>
