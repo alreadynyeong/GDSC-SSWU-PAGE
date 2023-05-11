@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Image from "next/image"
-import GDSC from "@/public/GDSC.svg"
+import GDSC from "@/public/Logo/GDSC.svg"
 import Button from "../common/button"
 
 const Container = styled.div`

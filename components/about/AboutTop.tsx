@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import GDSC from "@/public/GDSC.svg"
-import Developer from "@/public/Developer.svg"
+import GDSC from "@/public/Logo/GDSC.svg"
+import Developer from "@/public/Logo/Developer.svg"
 
 const Container = styled.div`
     height: 740px;

@@ -34,6 +34,7 @@ const Info = styled.div`
     }
     > p {
         padding: 30px;
+        white-space: pre-line
     }
 `
 

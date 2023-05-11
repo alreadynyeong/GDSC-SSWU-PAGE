@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import HomeImage from "@/public/HomeImage.svg"
-import HomeImage2 from "@/public/HomeImage2.svg"
-import HomeImage3 from "@/public/HomeImage3.svg"
+import HomeImage from "@/public/Home/HomeImage.svg"
+import HomeImage2 from "@/public/Home/HomeImage2.svg"
+import HomeImage3 from "@/public/Home/HomeImage3.svg"
 import { HomeParts } from "@/constants/Part";
 
 const Container = styled.div`

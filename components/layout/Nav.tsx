@@ -1,7 +1,7 @@
 import React from "react"
 import { NavBarMenus } from "@/constants/Route"
 import styled from "styled-components"
-import SSWU from '@/public/SSWU.svg'
+import SSWU from '@/public/Logo/SSWU.svg'
 import Link from "next/link"
 
 const Container = styled.div`
