@@ -12,12 +12,12 @@ export const Parts: { [key: string]: PartType } = {
     },
     FRONT: {
         title: "Frontend",
-        content: "앱/웹에서 사용자 인터페이스를 구현합니다.",
+        content: "사용자 인터페이스를 구현하는데 집중합니다. 웹 페이지나 모바일 애플리케이션 등의 디자인과 사용자 경험을 개발합니다.",
         svg: 2
     },
     BACK: {
         title: "Backend",
-        content: "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
+        content: "사용자의 요청에 대해 데이터를 처리하고 반환하고 보안과 확장성을 유지보수하기 위해 노력합니다.",
         svg: 3
     }
   };

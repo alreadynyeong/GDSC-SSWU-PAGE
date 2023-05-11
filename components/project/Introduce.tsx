@@ -15,6 +15,7 @@ const Title = styled.h1`
 const Content = styled.p`
     width: 600px;
     margin: 0 auto;
+    white-space: pre-line
 `
 interface IntroduceProps {
     title: string,
