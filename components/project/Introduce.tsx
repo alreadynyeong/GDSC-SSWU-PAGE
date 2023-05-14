@@ -5,6 +5,7 @@ const Container = styled.div`
     height: 300px;
     background-color: #F3FAF6;
     padding-top: 20px;
+    overflow: scroll;
 `
 const Title = styled.h1`
     width: fit-content; 

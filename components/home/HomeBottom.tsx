@@ -5,6 +5,7 @@ const Container = styled.div`
     height: 690px;
     background-color: #FEF5F5;
     padding: 40px;
+    overflow: scroll;
 `
 const ContentBox = styled.div`
     width: 830px;

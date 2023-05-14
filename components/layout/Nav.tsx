@@ -14,6 +14,7 @@ const Container = styled.div`
 	align-item: center;
     position: fixed;
     box-shadow: 5px 0.2px 5px 1px lightgray;
+    overflow: scroll;
 `
 const MenuContainer = styled.div`
     display: flex;
