@@ -54,7 +54,7 @@ const Detail = () => {
             <TeamBox>
                 <Title>TEAM {team}</Title>
                 <ImageBox>
-                    <img src={`Teams/${team}2.png`} alt={""} width={1046} height={408}/>
+                    <img src={`https://alreadynyeong.github.io/GDSC-SSWU-PAGE/Teams/${team}2.png`} alt={""} width={1046} height={408}/>
                 </ImageBox>
                 <Info>
                     <div>"{data?.name}"</div>
