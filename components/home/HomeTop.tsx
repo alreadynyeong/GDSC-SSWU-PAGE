@@ -22,7 +22,7 @@ const ImageContainer = styled.div`
     width: 411px;
     height: 335px;
     border-radius: 0px 0px 0px 106px;
-    border: 1px solid red;
+    // border: 1px solid red;
     overflow: hidden;
     margin-left: 100px;
 `
@@ -64,7 +64,7 @@ const HomeTop = () => {
                     </ButtonBox>
                 </div>
                 <ImageContainer>
-                    {/* <Image src="/test.jpeg" alt={""} width={411} height={335}/> */}
+                <img src={`https://alreadynyeong.github.io/GDSC-SSWU-PAGE/Photo/HomePhoto.jpeg`} alt={""} width={411} height={335}/>
                 </ImageContainer>
             </Contents>
         </Container>

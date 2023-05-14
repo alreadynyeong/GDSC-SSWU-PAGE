@@ -18,15 +18,17 @@ const ContentBox = styled.div`
 const ImageContainer = styled.div`
     width: 328px;
     height: 335px;
-    border: 1px solid red;
+    // border: 1px solid red;
     border-radius: 100px 0px 0px 0px;
+    overflow: hidden;
 `
 const SquareImage = styled.div`
     width: 515px;
     height: 117px;
-    border: 1px solid red;
+    // border: 1px solid red;
     margin: 0 auto;
     margin-top: -80px;
+    overflow: hidden;
 `
 const TextBox = styled.div`
     width: 440px;
@@ -46,13 +48,17 @@ const HomeBottom = () => {
     return (
         <Container>
             <ContentBox>
-                <ImageContainer/>
+                <ImageContainer>
+                    <img src={`https://alreadynyeong.github.io/GDSC-SSWU-PAGE/Photo/Highlight2.jpeg`} alt={""} width={328} height={335}/>
+                </ImageContainer>
                 <TextBox>
                     <Title>HIGHLIGHT</Title>
-                    <p>GDSC 성신여대에서 한 활동 중 가장 성과가 좋거나, 대표될 수 있는 결과물을 넣으면 좋을 것 같습니다. </p>
+                    <p>GDSC 성신여대에서는 GDSC SSWU뿐만 아니라 GDG, GDSC 주최의 다양한 행사에 참여합니다.</p>
                 </TextBox>
             </ContentBox>
-            <SquareImage/>
+            <SquareImage>
+                <img src={`https://alreadynyeong.github.io/GDSC-SSWU-PAGE/Photo/Highlight1.jpeg`} alt={""} width={515} height={117}/>
+            </SquareImage>
         </Container>
     )
 }

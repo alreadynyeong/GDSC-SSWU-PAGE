@@ -46,7 +46,7 @@ const LogoBox = styled.div`
     }
 `
 const ImageBox = styled.div`
-    border: 1px solid red;
+    // border: 1px solid red;
     width: 461px;
     height: 392px;
     margin: 20px;
@@ -58,10 +58,10 @@ const AboutTop = () => {
                 <Info>
                     <Big>
                         <p>GDSC</p>
-                        <p>성신여대를 한줄로 간단히 소개하는 말</p>
+                        <p>Sungshin Women's University 4th</p>
                     </Big>
                     <Small>
-                        <p>GDSC 소개 GDSC 소개 GDSC 소개 GDSC 소개 GDSC 소개 GDSC 소개 GDSC 소개 GDSC 소개 GDSC 소개 GDSC 소개 </p>
+                        <p> GDSC SSWU 4기는 성신여대 학생 29명으로 이루어져있는 구글 개발 커뮤니티입니다</p>
                     </Small>
                     <LogoBox>
                         <div><GDSC /></div>
@@ -69,7 +69,7 @@ const AboutTop = () => {
                     </LogoBox>
                 </Info>
                 <ImageBox>
-
+                <img src={`https://alreadynyeong.github.io/GDSC-SSWU-PAGE/Photo/AboutPhoto.jpeg`} alt={""} width={461} height={392}/>
                 </ImageBox>
             </Contents>
         </Container>

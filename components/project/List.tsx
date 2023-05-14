@@ -52,6 +52,7 @@ const List = () => {
                     <Link href={`/project/${t.team}`} key={t.team}>
                         <ItemContainer>
                             <TeamImage>
+                                {/* <img src={`https://alreadynyeong.github.io/GDSC-SSWU-PAGE/Teams/${t.team}1.png`} alt={""} width={250} height={309}/> */}
                                 <img src={`https://alreadynyeong.github.io/GDSC-SSWU-PAGE/Teams/${t.team}1.png`} alt={""} width={250} height={309}/>
                             </TeamImage>
                             <TeamName>{t.team} TEAM</TeamName>
