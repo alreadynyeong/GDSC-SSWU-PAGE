@@ -57,7 +57,7 @@ const HomeBottom = () => {
                 </TextBox>
             </ContentBox>
             <SquareImage>
-                <img src={`https://alreadynyeong.github.io/GDSC-SSWU-PAGE/Photo/Highlight1.jpeg`} alt={""} width={515} height={307}/>
+                <img src={`https://alreadynyeong.github.io/GDSC-SSWU-PAGE/Photo/Highlight1.jpeg`} alt={""} width={515} height={117}/>
             </SquareImage>
         </Container>
     )
