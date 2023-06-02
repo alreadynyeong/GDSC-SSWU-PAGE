@@ -1,18 +1,41 @@
-import React from 'react';
-import {useMediaQuery} from 'react-responsive';
+import { useEffect, useState } from "react";
 
-export const Mobile = ({children}) => {
-  const isMobile = useMediaQuery({
-    query : "(max-width:768px)"
-  });
-  
-  return <>{isMobile && children}</>
-}
+export const Mobile = ({ children }) => {
+  const [isMobile, setIsMobile] = useState(false);
 
-export const PC = ({children}) => {
-  const isPc = useMediaQuery({
-    query : "(min-width:769px)"
-  });
-  
-  return <>{isPc && children}</>
-}
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  return <>{isMobile && children}</>;
+};
+
+export const PC = ({ children }) => {
+  const [isPc, setIsPc] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsPc(window.innerWidth >= 769);
+    };
+
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  return <>{isPc && children}</>;
+};
