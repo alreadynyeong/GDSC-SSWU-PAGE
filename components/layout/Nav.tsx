@@ -12,7 +12,6 @@ const Container = styled.div`
     height: 130px;
     display: flex;
 	justify-content: space-between;
-	align-item: center;
     position: fixed;
     box-shadow: 5px 0.2px 5px 1px lightgray;
     overflow: scroll;

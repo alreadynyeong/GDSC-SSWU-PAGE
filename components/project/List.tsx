@@ -24,14 +24,13 @@ const Items = styled.div`
 `
 const ItemContainer = styled.div`
     width: 250px;
-    margin: 20px;
+    margin: 0px;
     flex-basis: 150px;
     flex-grow: 1;
 `
 const TeamImage = styled.div`
     width: 250px;
     height: 309px;
-    // border: 1px solid black;
     margin: 0 auto;
 `
 const TeamName = styled.div`
@@ -43,6 +42,18 @@ const TeamName = styled.div`
 const TeamMember = styled.div`
     width: fit-content; 
     margin: 0 auto;
+`
+const MobileItemContainer = styled.div`
+    margin: 10px;
+    flex-basis: 150px;
+    flex-grow: 1;
+`
+const MobileTeamName = styled.div`
+
+    font-weight: bold;
+    width: fit-content; 
+    margin: 0 auto;
+    padding: 10px;
 `
 const MobileTeamMember = styled.div`
     width: fit-content; 
@@ -74,14 +85,14 @@ const List = () => {
             <Items>
                 {TEAMS.map((t)=>(
                     <Link href={`/project/${t.team}`} key={t.team}>
-                        <div>
-                            <TeamImage>
+                        <MobileItemContainer>
+                            <div>
                                 {/* <img src={`https://alreadynyeong.github.io/GDSC-SSWU-PAGE/Teams/${t.team}1.png`} alt={""} width={250} height={309}/> */}
-                                <img src={`https://alreadynyeong.github.io/GDSC-SSWU-PAGE/Teams/${t.team}1.png`} alt={""} width={250} height={309}/>
-                            </TeamImage>
-                            <TeamName>{t.team} TEAM</TeamName>
+                                <img src={`https://alreadynyeong.github.io/GDSC-SSWU-PAGE/Teams/${t.team}1.png`} alt={""} width={200} height={259}/>
+                            </div>
+                            <MobileTeamName>{t.team} TEAM</MobileTeamName>
                             <MobileTeamMember>{t.member}</MobileTeamMember>
-                        </div>
+                        </MobileItemContainer>
                     </Link>
                 ))}
             </Items>
