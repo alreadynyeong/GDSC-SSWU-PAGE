@@ -1,6 +1,13 @@
-import { useEffect, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 
-export const Mobile = ({ children }) => {
+interface MobileProps {
+  children: ReactNode;
+}
+interface PCProps {
+  children: ReactNode;
+}
+
+export const Mobile = ({ children }: MobileProps) => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -20,7 +27,7 @@ export const Mobile = ({ children }) => {
   return <>{isMobile && children}</>;
 };
 
-export const PC = ({ children }) => {
+export const PC = ({ children }: PCProps) => {
   const [isPc, setIsPc] = useState(false);
 
   useEffect(() => {
