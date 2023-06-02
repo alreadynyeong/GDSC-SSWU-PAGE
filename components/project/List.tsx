@@ -24,7 +24,7 @@ const Items = styled.div`
 `
 const ItemContainer = styled.div`
     width: 250px;
-    margin: 0px;
+    margin: 10px;
     flex-basis: 150px;
     flex-grow: 1;
 `
@@ -49,7 +49,6 @@ const MobileItemContainer = styled.div`
     flex-grow: 1;
 `
 const MobileTeamName = styled.div`
-
     font-weight: bold;
     width: fit-content; 
     margin: 0 auto;
