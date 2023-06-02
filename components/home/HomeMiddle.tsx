@@ -1,10 +1,15 @@
 import React, { useState } from "react";
-import styled from "styled-components";
+import styled, { CSSProp } from 'styled-components';
 import HomeImage from "@/public/Home/HomeImage.svg"
 import HomeImage2 from "@/public/Home/HomeImage2.svg"
 import HomeImage3 from "@/public/Home/HomeImage3.svg"
 import { HomeParts } from "@/constants/Part";
 import { Mobile, PC } from "@/hook/useMideaQuery";
+
+interface PickCircleProps {
+    isActive: boolean;
+    onClick: () => void;
+  }
 
 const Container = styled.div`
     height: 680px;
@@ -49,13 +54,13 @@ const PickDiv = styled.div`
     margin: 0 auto;
     width: fit-content;
 `
-const PickCircle = styled.div`
-    border: 1px solid #0F9D58;
-    width: 10px;
-    height: 10px;
-    border-radius: 100px;
-    background-color: ${({ isActive }) => (isActive ? "#0F9D58" : "transparent")};
-`
+const PickCircle = styled.div<PickCircleProps>`
+  border: 1px solid #0F9D58;
+  width: 10px;
+  height: 10px;
+  border-radius: 100px;
+  background-color: ${({ isActive }) => (isActive ? "#0F9D58" : "transparent")};
+`;
 const MobilePartBox = styled.div`
     align-item: center;
     width: fit-content;
