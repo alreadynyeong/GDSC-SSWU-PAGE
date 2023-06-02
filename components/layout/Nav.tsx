@@ -1,8 +1,9 @@
-import React from "react"
+import React, { useState } from "react"
 import { NavBarMenus } from "@/constants/Route"
 import styled from "styled-components"
 import SSWU from '@/public/Logo/SSWU.svg'
 import Link from "next/link"
+import { Mobile, PC } from "@/hook/useMideaQuery"
 
 const Container = styled.div`
     padding: 50px;
@@ -32,12 +33,49 @@ const Menu = styled.div`
     border: 1px solid;
     padding: 10px;
 `
+const MobileMenuDrop = styled.div`
+    // border: solid 1px black;
+    text-align: right;
+    height: fit-content;
+    padding: 5px;
+    position: absolute;
+    top: 7px;
+    right: 40px;
+    margin-right: -40px;
+`
 const Nav = () => {
+    const [menu, setMenu] = useState<boolean>(false);
     return (
-        <Container>
-            <div>
-                <SSWU width={199} height={'100%'}/>
-            </div>
+        <>
+            <Container>
+        <div>
+            <SSWU width={199} height={'100%'}/>
+        </div>
+        <Mobile>
+            {menu ? null : 
+            <div onClick={()=>setMenu(true)}>
+                MENU
+            </div>}
+            {menu ? 
+            <MobileMenuDrop>
+                <div onClick={()=>setMenu(false)}>
+                    X
+                </div>
+            {NavBarMenus.map((menu)=>(
+                    <div
+                    style={{borderColor: menu.color}}  
+                    key={menu.route}>
+                        <Link href={menu.route} passHref>
+                            <div>{menu.title}</div>
+                            <hr></hr>
+                        </Link>
+                    </div>
+                ))}
+            </MobileMenuDrop>
+            : null}
+
+        </Mobile>
+        <PC>
             <MenuContainer>
                 {NavBarMenus.map((menu)=>(
                     <Menu
@@ -49,7 +87,9 @@ const Nav = () => {
                     </Menu>
                 ))}
             </MenuContainer>
-        </Container>
+        </PC>
+    </Container>
+        </>
     )
 }
 
