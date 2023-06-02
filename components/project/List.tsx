@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Link from "next/link";
 import { TEAMS } from "@/constants/Teams";
+import { Mobile, PC } from "@/hook/useMideaQuery";
 
 const Container = styled.div`
     background-color: white;
@@ -43,9 +44,15 @@ const TeamMember = styled.div`
     width: fit-content; 
     margin: 0 auto;
 `
+const MobileTeamMember = styled.div`
+    width: fit-content; 
+    margin: 0 auto;
+    margin-bottom: 40px;
+`
 const List = () => {
     return(
         <Container>
+            <PC>
             <Title>OUT PRODUCT</Title>
             <Items>
                 {TEAMS.map((t)=>(
@@ -61,6 +68,24 @@ const List = () => {
                     </Link>
                 ))}
             </Items>
+            </PC>
+
+            <Mobile>
+            <Items>
+                {TEAMS.map((t)=>(
+                    <Link href={`/project/${t.team}`} key={t.team}>
+                        <div>
+                            <TeamImage>
+                                {/* <img src={`https://alreadynyeong.github.io/GDSC-SSWU-PAGE/Teams/${t.team}1.png`} alt={""} width={250} height={309}/> */}
+                                <img src={`https://alreadynyeong.github.io/GDSC-SSWU-PAGE/Teams/${t.team}1.png`} alt={""} width={250} height={309}/>
+                            </TeamImage>
+                            <TeamName>{t.team} TEAM</TeamName>
+                            <MobileTeamMember>{t.member}</MobileTeamMember>
+                        </div>
+                    </Link>
+                ))}
+            </Items>
+            </Mobile>
         </Container>
     )
 }
