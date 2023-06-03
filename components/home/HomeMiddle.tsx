@@ -65,7 +65,7 @@ const MobilePartBox = styled.div`
     align-item: center;
     width: fit-content;
     margin: 0 auto;
-    margin-top: 40px;
+    margin-top: 90px;
 
 `
 
