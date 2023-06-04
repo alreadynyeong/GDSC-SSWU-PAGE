@@ -8,12 +8,10 @@ import { HiMenu, HiX } from "react-icons/hi";
 import { FiMoon, FiSun } from "react-icons/fi";
 import MobileMenuDrop from "@/components/layout/MobileMenuDrop";
 import { NavBarMenus } from "@/constants/Route";
-import { lightTheme, darkTheme } from '@/styles/Theme';
+import { lightTheme, darkTheme, GlobalStyle } from '@/styles/Theme';
 
 const Container = styled.div`
   padding: 50px;
-  background-color: ${(props) => props.theme.backgroundColor};
-  color: ${(props) => props.theme.textColor};
   width: 100%;
   height: 130px;
   display: flex;
@@ -21,6 +19,7 @@ const Container = styled.div`
   position: fixed;
   box-shadow: 5px 0.2px 5px 1px lightgray;
   overflow: scroll;
+  background-color: ${(props)=>props.theme.backgroundColor}
 `;
 const MenuContainer = styled.div`
   display: flex;
@@ -46,29 +45,24 @@ const Button = styled.div`
     margin-right: 4px;
   }
 `;
-const Nav = () => {
+const Nav = ({ toggleTheme, darkMode }: any) => {
   const [menu, setMenu] = useState<boolean>(false);
-  const [darkMode, setDarkMode] = useState<boolean>(false);
-
   const theme = darkMode ? darkTheme : lightTheme;
-
+  console.log("?",darkMode, toggleTheme)
+  console.log("!",theme)
   const toggleMenu = () => {
     setMenu(!menu);
   };
 
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
-
-
   return (
     <>
       <Container theme={theme}>
+      <GlobalStyle />
         <div>
-          {darkMode ? <SSWUdark width={199} height={"100%"} /> : <SSWU width={199} height={"100%"} />}
+          {darkMode=='dark' ? <SSWUdark width={199} height={"100%"} /> : <SSWU width={199} height={"100%"} />}
         </div>
-        <Button onClick={toggleDarkMode}>
-          {darkMode ? <FiSun size={20} /> : <FiMoon size={20} />}
+        <Button onClick={toggleTheme}>
+          {darkMode=='dark' ? <FiSun size={20} /> : <FiMoon size={20} />}
         </Button>
         <Mobile>
           <Button onClick={toggleMenu}>
