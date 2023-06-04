@@ -9,6 +9,7 @@ const Container = styled.div`
     display: flex;
     padding: 10px;
     padding: 40px;
+    margin: -8px;
 `
 const Contents = styled.div`
     margin: 0 auto;

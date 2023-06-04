@@ -5,7 +5,6 @@ const Container = styled.div`
     height: 300px;
     background-color: ${(props) => props.theme.green};
     padding-top: 20px;
-    overflow: scroll;
 `
 const Title = styled.h1`
     width: fit-content; 
@@ -14,7 +13,8 @@ const Title = styled.h1`
     color: ${(props) => props.theme.textGreen};
 `
 const Content = styled.p`
-    width: 600px;
+    max-width: 100%;    
+    // width: 600px;
     margin: 0 auto;
     white-space: pre-line
 `
