@@ -2,9 +2,10 @@ import React, { useContext } from "react";
 import styled, { ThemeContext } from "styled-components";
 
 const Container = styled.div`
-    height: 300px;
+    height: fit-content;
     background-color: ${(props) => props.theme.green};
     padding-top: 20px;
+    padding-bottom: 30px;
 `
 const Title = styled.h1`
     width: fit-content; 

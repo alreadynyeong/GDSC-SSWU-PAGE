@@ -55,8 +55,9 @@ const MobileContents = styled.div`
     margin-left: -50px;
 `
 const MobileBig = styled.div`
-    font-size: 38px;
+    font-size: 28px;
     font-weight: bold;
+    width: 300px;
 `
 const MobileSmall = styled.div`
     width: 300px;
