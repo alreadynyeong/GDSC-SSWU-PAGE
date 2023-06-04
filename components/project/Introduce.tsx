@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components";
+import React, { useContext } from "react";
+import styled, { ThemeContext } from "styled-components";
 
 const Container = styled.div`
     height: 300px;
-    background-color: #F3FAF6;
+    background-color: ${(props) => props.theme.green};
     padding-top: 20px;
     overflow: scroll;
 `
@@ -11,7 +11,7 @@ const Title = styled.h1`
     width: fit-content; 
     margin: 0 auto;
     padding-bottom: 30px;
-    color: #0F9D58;
+    color: ${(props) => props.theme.textGreen};
 `
 const Content = styled.p`
     width: 600px;
@@ -26,8 +26,9 @@ interface IntroduceProps {
 const Introduce = ({ 
     title = 'Introduce Title', 
     content = 'Introduce content' }: IntroduceProps) => {
+        const theme = useContext(ThemeContext);
     return(
-        <Container>
+        <Container theme={theme}>
             <Title>{title}</Title>
             <Content>{content}</Content>
         </Container>

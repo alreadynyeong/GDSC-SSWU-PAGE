@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import styled, { CSSProp } from 'styled-components';
+import React, { useContext, useState } from "react";
+import styled, { CSSProp, ThemeContext } from 'styled-components';
 import HomeImage from "@/public/Home/HomeImage.svg"
 import HomeImage2 from "@/public/Home/HomeImage2.svg"
 import HomeImage3 from "@/public/Home/HomeImage3.svg"
@@ -13,7 +13,8 @@ interface PickCircleProps {
 
 const Container = styled.div`
     height: 680px;
-    background-color: #F3FAF6;
+    background-color: ${(props) => props.theme.green};
+    
     text-align: center;
     overflow: scroll;
 `
@@ -21,7 +22,7 @@ const Title = styled.div`
     font-size: 48px;
     font-weight: bold;
     padding: 90px;
-    color: #0F9D58;
+    color: ${(props) => props.theme.textGreen};
 `
 const PartBox = styled.div`
     display: flex;
@@ -46,7 +47,7 @@ const MobileTitle = styled.div`
     font-size: 38px;
     font-weight: bold;
     padding: 90px 20px 20px 20px;
-    color: #0F9D58;
+    color: ${(props) => props.theme.textGreen};
 `
 const PickDiv = styled.div`
     display: flex;
@@ -55,11 +56,11 @@ const PickDiv = styled.div`
     width: fit-content;
 `
 const PickCircle = styled.div<PickCircleProps>`
-  border: 1px solid #0F9D58;
+  border: 1px solid ${(props) => props.theme.textGreen};
   width: 10px;
   height: 10px;
   border-radius: 100px;
-  background-color: ${({ isactive }) => (isactive ? "#0F9D58" : "transparent")};
+  background-color: ${(props) => (props.isactive ? props.theme.textGreen : "transparent")};
 `;
 const MobilePartBox = styled.div`
     align-item: center;
@@ -71,10 +72,11 @@ const MobilePartBox = styled.div`
 
 const HomeMiddle = () => {
     const [pick, setPick] = useState<number>(0);
+    const theme = useContext(ThemeContext);
     return (
-        <Container>
+        <Container theme={theme}>
             <PC>
-                <Title>WE STUDY ABOUT..</Title>
+                <Title theme={theme}>WE STUDY ABOUT..</Title>
                 <PartBox>
                     {HomeParts.map((p, index) => (
                         <Part key={p.title}>

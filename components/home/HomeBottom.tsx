@@ -1,10 +1,10 @@
 import { Mobile, PC } from "@/hook/useMideaQuery";
-import React from "react";
-import styled from "styled-components";
+import React, { useContext } from "react";
+import styled, { ThemeContext } from "styled-components";
 
 const Container = styled.div`
     height: 690px;
-    background-color: #FEF5F5;
+    background-color: ${(props) => props.theme.red};
     padding: 40px;
     overflow: scroll;
 `
@@ -39,7 +39,7 @@ const TextBox = styled.div`
     }
 `
 const Title = styled.p`
-    color: #EA4335;
+background-color: ${(props) => props.theme.textRreen};
     font-size: 48px;
     font-weight: bold;
 
@@ -72,16 +72,17 @@ const MobileSquareImage = styled.div`
 `
 
 const HomeBottom = () => {
+    const theme = useContext(ThemeContext);
     return (
         <>
         <PC>
-            <Container>
+            <Container theme={theme}>
                 <ContentBox>
                     <ImageContainer>
                         <img src={`https://alreadynyeong.github.io/GDSC-SSWU-PAGE/Photo/Highlight2.jpeg`} alt={""} width={328} height={335}/>
                     </ImageContainer>
                     <TextBox>
-                        <Title>HIGHLIGHT</Title>
+                        <Title theme={theme}>HIGHLIGHT</Title>
                         <p>GDSC 성신여대에서는 GDSC SSWU뿐만 아니라 GDG, GDSC 주최의 다양한 행사에 참여합니다.</p>
                     </TextBox>
                 </ContentBox>

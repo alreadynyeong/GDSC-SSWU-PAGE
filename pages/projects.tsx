@@ -1,15 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import Introduce from "@/components/project/Introduce";
 import List from "@/components/project/List";
-import styled from "styled-components";
+import styled, { ThemeContext } from "styled-components";
 
 
 const Container = styled.div`
     margin: 0 auto;
-    background-color: #F3FAF6;
+    background-color: ${(props) => props.theme.green};
     padding: 200px 50px 50px 50px;
 `
 const Projects = () => {
+    const theme = useContext(ThemeContext);
     return (
         <Container>
             <Introduce title={"SOLUTION CHALLENGE"} 
