@@ -5,7 +5,7 @@ import Developer from "@/public/Logo/Developer.svg"
 import { Mobile, PC } from "@/hook/useMideaQuery";
 
 const Container = styled.div`
-    height: 740px;
+    height: 800px;
     display: flex;
     padding: 10px;
     padding: 40px;
@@ -49,8 +49,7 @@ const ImageBox = styled.div`
 `
 const MobileContents = styled.div`
     margin: 0 auto;
-    width: fit-content;
-    height: fit-content;
+    width: 300px;
     margin-top: 120px; 
     margin-left: -50px;
 `
