@@ -66,8 +66,6 @@ const MenuButton = styled.div`
 const Nav = ({ toggleTheme, darkMode }: any) => {
   const [menu, setMenu] = useState<boolean>(false);
   const theme = darkMode ? darkTheme : lightTheme;
-  console.log("?",darkMode, toggleTheme)
-  console.log("!",theme)
   const toggleMenu = () => {
     setMenu(!menu);
   };
