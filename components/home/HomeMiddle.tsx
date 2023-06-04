@@ -7,7 +7,7 @@ import { HomeParts } from "@/constants/Part";
 import { Mobile, PC } from "@/hook/useMideaQuery";
 
 interface PickCircleProps {
-    isActive: boolean;
+    isactive: boolean;
     onClick: () => void;
   }
 
@@ -59,7 +59,7 @@ const PickCircle = styled.div<PickCircleProps>`
   width: 10px;
   height: 10px;
   border-radius: 100px;
-  background-color: ${({ isActive }) => (isActive ? "#0F9D58" : "transparent")};
+  background-color: ${({ isactive }) => (isactive ? "#0F9D58" : "transparent")};
 `;
 const MobilePartBox = styled.div`
     align-item: center;
