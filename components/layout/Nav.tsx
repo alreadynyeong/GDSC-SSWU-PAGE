@@ -4,6 +4,7 @@ import styled from "styled-components";
 import SSWU from "@/public/Logo/SSWU.svg";
 import Link from "next/link";
 import { Mobile, PC } from "@/hook/useMideaQuery";
+import { HiMenu, HiX } from "react-icons/hi";
 
 const Container = styled.div`
   padding: 50px;
@@ -62,11 +63,15 @@ const Nav = () => {
         </div>
         <Mobile>
           {menu ? null : (
-            <div onClick={toggleMenu}>MENU</div>
+            <div onClick={toggleMenu}>
+              {menu ? <HiX size={20}/> : <HiMenu size={24}/>} {/* MENU 버튼을 아이콘으로 변경 */}
+            </div>
           )}
           {menu ? (
             <MobileMenuDrop>
-              <div onClick={toggleMenu}>X</div>
+              <div onClick={toggleMenu}>
+                <HiX size={20}/>
+              </div>
               {NavBarMenus.map((menu) => (
                 <div
                   style={{ borderColor: menu.color }}
