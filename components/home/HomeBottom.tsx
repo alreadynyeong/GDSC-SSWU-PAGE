@@ -39,7 +39,7 @@ const TextBox = styled.div`
     }
 `
 const Title = styled.p`
-background-color: ${(props) => props.theme.textRreen};
+    color: ${(props) => props.theme.textRed};
     font-size: 48px;
     font-weight: bold;
 
