@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import SSWU from "@/public/Logo/SSWU.svg";
 import SSWUdark from "@/public/Logo/SSWUdark.svg";
@@ -67,16 +67,29 @@ const MenuButton = styled.div`
 const Nav = ({ toggleTheme, darkMode }: any) => {
   const [menu, setMenu] = useState<boolean>(false);
   const theme = darkMode ? darkTheme : lightTheme;
+
   const toggleMenu = () => {
     setMenu(!menu);
   };
 
+  useEffect(() => {
+    const handleRouteChange = () => {
+      setMenu(false);
+    };
+
+    router.events.on("routeChangeStart", handleRouteChange);
+
+    return () => {
+      router.events.off("routeChangeStart", handleRouteChange);
+    };
+  }, []);
+
   return (
     <>
       <Container theme={theme}>
-      <GlobalStyle />
+        <GlobalStyle />
         <Logo>
-        {darkMode ? (
+          {darkMode ? (
             <SSWUdark width={199} height={"100%"} />
           ) : (
             <SSWU width={199} height={"100%"} />
@@ -87,22 +100,26 @@ const Nav = ({ toggleTheme, darkMode }: any) => {
         </Button>
         <Mobile>
           <MenuButton onClick={toggleMenu}>
-            {menu? <HiX size={20} /> : <HiMenu size={20} />}
+            {menu ? <HiX size={20} /> : <HiMenu size={20} />}
           </MenuButton>
         </Mobile>
         <PC>
-        <MenuContainer>
-          {NavBarMenus.map((menu) => (
-              <Menu onClick={()=>router.push(menu.route)} style={{ borderColor: menu.color }}>
-              <span style={{ textDecoration: 'none' }}>{menu.title}</span>
+          <MenuContainer>
+            {NavBarMenus.map((menu) => (
+              <Menu
+                onClick={() => {
+                  setMenu(false);
+                  router.push(menu.route);
+                }}
+                style={{ borderColor: menu.color }}
+              >
+                <span style={{ textDecoration: "none" }}>{menu.title}</span>
               </Menu>
-          ))}
-        </MenuContainer>
+            ))}
+          </MenuContainer>
         </PC>
       </Container>
-      {menu && (
-        <MobileMenuDrop />
-      )}
+      {menu && <MobileMenuDrop />}
     </>
   );
 };
