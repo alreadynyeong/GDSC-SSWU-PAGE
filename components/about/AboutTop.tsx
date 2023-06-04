@@ -8,7 +8,6 @@ const Container = styled.div`
     height: 740px;
     display: flex;
     padding: 10px;
-    background-color: #FFFFFF;
     padding: 40px;
 `
 const Contents = styled.div`

@@ -19,7 +19,7 @@ const Container = styled.div`
   position: fixed;
   box-shadow: 5px 0.2px 5px 1px lightgray;
   overflow: scroll;
-  background-color: ${(props)=>props.theme.backgroundColor}
+  background-color: ${(props) => props.theme.backgroundColor};
 `;
 const MenuContainer = styled.div`
   display: flex;

@@ -1,12 +1,14 @@
-import React from "react"
+import React, { useContext } from "react"
 import Link from "next/link"
 import { Infos } from "@/constants/Info"
-import styled from "styled-components"
+import styled, { ThemeContext } from "styled-components"
 
 const Container = styled.div`
     background-color: white;
     width: 100%;
     padding-bottom: 50px;
+    background-color: ${(props) => props.theme.backgroundColor};
+    color: ${(props) => props.theme.textColor};
 `
 const Line = styled.div`
     background-color: #696969;
@@ -22,6 +24,8 @@ const Info = styled.div`
 
 `
 const Bottom = () => {
+    const theme = useContext(ThemeContext);
+    // console.log(theme)
     return (
        <Container>
             <Line/>

@@ -14,6 +14,5 @@ export const GlobalStyle = createGlobalStyle`
   body {
     background-color: ${(props) => props.theme.backgroundColor};
     color: ${(props) => props.theme.textColor};
-    // 기타 전역 스타일 설정
   }
 `;

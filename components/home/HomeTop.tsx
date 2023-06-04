@@ -1,16 +1,16 @@
-import React from "react"
-import styled from "styled-components"
-import Image from "next/image"
-import GDSC from "@/public/Logo/GDSC.svg"
-import Button from "../common/button"
-import { Mobile, PC } from "@/hook/useMideaQuery"
+import React, { useContext } from "react";
+import styled, { ThemeContext } from "styled-components";
+import GDSC from "@/public/Logo/GDSC.svg";
+import Button from "../common/button";
+import { Mobile, PC } from "@/hook/useMideaQuery";
 
 const Container = styled.div`
-    height: 590px;
-    background-color: white;
-    overflow: scroll;
-    padding: 50px;
-`
+  height: 590px;
+  overflow: scroll;
+  background-color: ${(props) => props.theme.backGroundColor};
+  color: ${(props) => props.theme.textColor};
+  padding: 50px;
+`;
 const Contents = styled.div`
     margin: 0 auto;
     // border: 1px solid red;
@@ -47,7 +47,6 @@ const ButtonBox = styled.div`
 `
 const MobileContainer = styled.div`
     height: 890px;
-    background-color: white;
     overflow: scroll;
     padding: 50px;
 `
@@ -73,10 +72,11 @@ const MobileImageContainer = styled.div`
     margin-top: 20px;
 `
 const HomeTop = () => {
+    const theme = useContext(ThemeContext);
     return (
         <>
             <PC>
-                <Container>
+                <Container theme={theme}>
                 <Contents>
                     <div>
                         <GDSC/>
