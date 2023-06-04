@@ -21,7 +21,7 @@ const Container = styled.div`
   box-shadow: 5px 0.2px 5px 1px lightgray;
   background-color: ${(props) => props.theme.backgroundColor};
   margin-top: -10px;
-  margin-left: -9px;
+  margin-left: -8px;
 `;
 const MenuContainer = styled.div`
   display: flex;
