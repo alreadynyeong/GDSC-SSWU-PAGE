@@ -12,11 +12,11 @@ const MobileMenuDropContainer = styled.div`
   top: 75px;
   right: 90px;
   margin-right: -40px;
-  background: white;
   border-radius: 5px;
   border: 1px solid lightgray;
   > div {
     padding: 5px;
+    color: ${(props) => props.theme.textColor};
   }
 `;
 
