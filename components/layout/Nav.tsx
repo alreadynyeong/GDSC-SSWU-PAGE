@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { NavBarMenus } from "@/constants/Route";
 import styled from "styled-components";
 import SSWU from "@/public/Logo/SSWU.svg";
 import Link from "next/link";
 import { Mobile, PC } from "@/hook/useMideaQuery";
 import { HiMenu, HiX } from "react-icons/hi";
+import MobileMenuDrop from "@/components/layout/MobileMenuDrop";
+import { NavBarMenus } from "@/constants/Route";
 
 const Container = styled.div`
   padding: 50px;
@@ -36,18 +37,6 @@ const Menu = styled.div`
   padding: 10px;
 `;
 
-const MobileMenuDrop = styled.div`
-  text-align: right;
-  height: fit-content;
-  padding: 5px;
-  position: absolute;
-  top: 7px;
-  right: 40px;
-  margin-right: -40px;
-  z-index: 10;
-  background: white;
-`;
-
 const Nav = () => {
   const [menu, setMenu] = useState<boolean>(false);
 
@@ -62,29 +51,9 @@ const Nav = () => {
           <SSWU width={199} height={"100%"} />
         </div>
         <Mobile>
-          {menu ? null : (
-            <div onClick={toggleMenu}>
-              {menu ? <HiX size={20}/> : <HiMenu size={24}/>} {/* MENU 버튼을 아이콘으로 변경 */}
-            </div>
-          )}
-          {menu ? (
-            <MobileMenuDrop>
-              <div onClick={toggleMenu}>
-                <HiX size={20}/>
-              </div>
-              {NavBarMenus.map((menu) => (
-                <div
-                  style={{ borderColor: menu.color }}
-                  key={menu.route}
-                >
-                  <Link href={menu.route} passHref>
-                    <div>{menu.title}</div>
-                    <hr></hr>
-                  </Link>
-                </div>
-              ))}
-            </MobileMenuDrop>
-          ) : null}
+          <div onClick={toggleMenu}>
+            {menu? <HiX size={20} /> : <HiMenu size={20} />}
+          </div>
         </Mobile>
         <PC>
           <MenuContainer>
@@ -101,6 +70,9 @@ const Nav = () => {
           </MenuContainer>
         </PC>
       </Container>
+      {menu && (
+        <MobileMenuDrop />
+      )}
     </>
   );
 };
