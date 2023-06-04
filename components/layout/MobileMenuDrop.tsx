@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Link from "next/link";
 import { NavBarMenus } from "@/constants/Route";
 import { HiX } from "react-icons/hi";
+import router from "next/router";
 
 const MobileMenuDropContainer = styled.div`
   text-align: right;
@@ -25,9 +26,7 @@ const MobileMenuDrop = () => {
     <MobileMenuDropContainer>
       {NavBarMenus.map((menu) => (
         <div style={{ borderColor: menu.color }} key={menu.route}>
-          <Link href={menu.route} passHref>
-            <div style={{ color: menu.color }}>{menu.title}</div>
-          </Link>
+            <div onClick={()=>router.push(menu.route)} style={{ color: menu.color }}>{menu.title}</div>
         </div>
       ))}
     </MobileMenuDropContainer>

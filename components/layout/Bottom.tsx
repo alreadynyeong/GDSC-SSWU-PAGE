@@ -6,7 +6,7 @@ import { Infos } from "@/constants/Info";
 const Container = styled.div`
   background-color: white;
   width: 100%;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
   background-color: ${(props) => props.theme.backgroundColor};
   color: ${(props) => props.theme.textColor};
 `;

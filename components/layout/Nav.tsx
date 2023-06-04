@@ -9,6 +9,7 @@ import { FiMoon, FiSun } from "react-icons/fi";
 import MobileMenuDrop from "@/components/layout/MobileMenuDrop";
 import { NavBarMenus } from "@/constants/Route";
 import { lightTheme, darkTheme, GlobalStyle } from '@/styles/Theme';
+import router from "next/router";
 
 const Container = styled.div`
   padding: 0px;
@@ -18,8 +19,8 @@ const Container = styled.div`
   justify-content: space-between;
   position: fixed;
   box-shadow: 5px 0.2px 5px 1px lightgray;
-  overflow: scroll;
   background-color: ${(props) => props.theme.backgroundColor};
+  margin-top: -10px;
 `;
 const MenuContainer = styled.div`
   display: flex;
@@ -51,7 +52,7 @@ const Button = styled.div`
   align-items: center;
   cursor: pointer;
   svg {
-    margin-right: 4px;
+    margin-left: 15px;
   }
 `;
 const MenuButton = styled.div`
@@ -92,11 +93,9 @@ const Nav = ({ toggleTheme, darkMode }: any) => {
         <PC>
         <MenuContainer>
           {NavBarMenus.map((menu) => (
-            <Link href={menu.route} key={menu.route} passHref>
-              <Menu style={{ borderColor: menu.color }}>
+              <Menu onClick={()=>router.push(menu.route)} style={{ borderColor: menu.color }}>
               <span style={{ textDecoration: 'none' }}>{menu.title}</span>
               </Menu>
-            </Link>
           ))}
         </MenuContainer>
         </PC>
