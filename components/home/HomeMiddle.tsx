@@ -92,7 +92,7 @@ const HomeMiddle = () => {
                         <PickCircle
                             key={index}
                             onClick={() => setPick(index)}
-                            isActive={pick === index}
+                            isactive={pick === index}
                         />
                     ))}
                 </PickDiv>
