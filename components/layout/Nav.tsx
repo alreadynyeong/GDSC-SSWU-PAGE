@@ -59,10 +59,14 @@ const Nav = ({ toggleTheme, darkMode }: any) => {
       <Container theme={theme}>
       <GlobalStyle />
         <div>
-          {darkMode=='dark' ? <SSWUdark width={199} height={"100%"} /> : <SSWU width={199} height={"100%"} />}
+        {darkMode ? (
+            <SSWUdark width={199} height={"100%"} />
+          ) : (
+            <SSWU width={199} height={"100%"} />
+          )}
         </div>
         <Button onClick={toggleTheme}>
-          {darkMode=='dark' ? <FiSun size={20} /> : <FiMoon size={20} />}
+          {darkMode ? <FiSun size={20} /> : <FiMoon size={20} />}
         </Button>
         <Mobile>
           <Button onClick={toggleMenu}>
