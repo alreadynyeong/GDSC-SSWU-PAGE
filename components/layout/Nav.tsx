@@ -11,7 +11,7 @@ import { NavBarMenus } from "@/constants/Route";
 import { lightTheme, darkTheme, GlobalStyle } from '@/styles/Theme';
 
 const Container = styled.div`
-  padding: 50px;
+  padding: 0px;
   width: 100%;
   height: 130px;
   display: flex;
@@ -27,6 +27,11 @@ const MenuContainer = styled.div`
   align-items: center;
   gap: 50px;
   padding-left: 50px;
+  margin-right: 40px;
+`;
+const Logo = styled.div`
+  margin-top: 50px;
+  margin-left: 40px;
 `;
 const Menu = styled.div`
   width: fit-content;
@@ -36,9 +41,22 @@ const Menu = styled.div`
   border-radius: 51px;
   border: 1px solid;
   padding: 10px;
+  color: ${(props) => props.theme.textColor};
+  text-decoration: none;
+  cursor: pointer;
 `;
+
 const Button = styled.div`
   display: flex;
+  align-items: center;
+  cursor: pointer;
+  svg {
+    margin-right: 4px;
+  }
+`;
+const MenuButton = styled.div`
+  display: flex;
+  margin-right: 40px;
   align-items: center;
   cursor: pointer;
   svg {
@@ -58,34 +76,31 @@ const Nav = ({ toggleTheme, darkMode }: any) => {
     <>
       <Container theme={theme}>
       <GlobalStyle />
-        <div>
+        <Logo>
         {darkMode ? (
             <SSWUdark width={199} height={"100%"} />
           ) : (
             <SSWU width={199} height={"100%"} />
           )}
-        </div>
+        </Logo>
         <Button onClick={toggleTheme}>
           {darkMode ? <FiSun size={20} /> : <FiMoon size={20} />}
         </Button>
         <Mobile>
-          <Button onClick={toggleMenu}>
+          <MenuButton onClick={toggleMenu}>
             {menu? <HiX size={20} /> : <HiMenu size={20} />}
-          </Button>
+          </MenuButton>
         </Mobile>
         <PC>
-          <MenuContainer>
-            {NavBarMenus.map((menu) => (
-              <Menu
-                style={{ borderColor: menu.color }}
-                key={menu.route}
-              >
-                <Link href={menu.route} passHref>
-                  <div>{menu.title}</div>
-                </Link>
+        <MenuContainer>
+          {NavBarMenus.map((menu) => (
+            <Link href={menu.route} key={menu.route} passHref>
+              <Menu style={{ borderColor: menu.color }}>
+              <span style={{ textDecoration: 'none' }}>{menu.title}</span>
               </Menu>
-            ))}
-          </MenuContainer>
+            </Link>
+          ))}
+        </MenuContainer>
         </PC>
       </Container>
       {menu && (
