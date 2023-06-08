@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import GDSC from "@/public/Logo/GDSC.svg"
 import Developer from "@/public/Logo/Developer.svg"
-import { Mobile, PC } from "@/hook/useMideaQuery";
+import { Mobile, PC } from "@/hook/responsive";
 
 const Container = styled.div`
     height: 800px;

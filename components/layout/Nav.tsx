@@ -3,11 +3,11 @@ import styled from "styled-components";
 import SSWU from "@/public/Logo/SSWU.svg";
 import SSWUdark from "@/public/Logo/SSWUdark.svg";
 import Link from "next/link";
-import { Mobile, PC } from "@/hook/useMideaQuery";
+import { Mobile, PC } from "@/hook/responsive";
 import { HiMenu, HiX } from "react-icons/hi";
 import { FiMoon, FiSun } from "react-icons/fi";
 import MobileMenuDrop from "@/components/layout/MobileMenuDrop";
-import { NavBarMenus } from "@/constants/Route";
+import { NavBarMenus } from "@/data/Route";
 import { lightTheme, darkTheme, GlobalStyle } from '@/styles/Theme';
 import router from "next/router";
 

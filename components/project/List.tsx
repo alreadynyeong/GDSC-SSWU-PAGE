@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import styled, { ThemeContext } from "styled-components";
 import Link from "next/link";
-import { TEAMS } from "@/constants/Teams";
-import { Mobile, PC } from "@/hook/useMideaQuery";
+import { TEAMS } from "@/data/Teams";
+import { Mobile, PC } from "@/hook/responsive";
 import { useRouter } from "next/router";
 
 const Container = styled.div`

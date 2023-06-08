@@ -1,8 +1,8 @@
 import Introduce from "@/components/project/Introduce";
 import styled, { ThemeContext } from "styled-components";
 import { useRouter } from 'next/router';
-import { TEAMS } from "@/constants/Teams";
-import { Mobile, PC } from "@/hook/useMideaQuery";
+import { TEAMS } from "@/data/Teams";
+import { Mobile, PC } from "@/hook/responsive";
 import { useContext } from "react";
 
 const Container = styled.div`

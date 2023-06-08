@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import styled, { ThemeContext } from "styled-components";
 import Link from "next/link";
-import { NavBarMenus } from "@/constants/Route";
+import { NavBarMenus } from "@/data/Route";
 import { HiX } from "react-icons/hi";
 import router from "next/router";
 

@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
 import { useRouter } from "next/router";
-import { Infos } from "@/constants/Info";
+import { Infos } from "@/data/Info";
 
 const Container = styled.div`
   background-color: white;

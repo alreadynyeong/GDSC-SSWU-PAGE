@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import styled, { ThemeContext } from "styled-components";
 import GDSC from "@/public/Logo/GDSC.svg";
 import Button from "../common/button";
-import { Mobile, PC } from "@/hook/useMideaQuery";
+import { Mobile, PC } from "@/hook/responsive";
 
 const Container = styled.div`
   height: 590px;

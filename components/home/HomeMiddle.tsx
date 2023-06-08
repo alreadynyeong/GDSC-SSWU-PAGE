@@ -3,8 +3,8 @@ import styled, { CSSProp, ThemeContext } from 'styled-components';
 import HomeImage from "@/public/Home/HomeImage.svg"
 import HomeImage2 from "@/public/Home/HomeImage2.svg"
 import HomeImage3 from "@/public/Home/HomeImage3.svg"
-import { HomeParts } from "@/constants/Part";
-import { Mobile, PC } from "@/hook/useMideaQuery";
+import { HomeParts } from "@/data/Part";
+import { Mobile, PC } from "@/hook/responsive";
 
 interface PickCircleProps {
     isactive: boolean;
