@@ -1,8 +1,6 @@
-import React, { useContext } from "react";
-import styled, { ThemeContext } from "styled-components";
-import Link from "next/link";
+import React from "react";
+import styled from "styled-components";
 import { NavBarMenus } from "@/data/Route";
-import { HiX } from "react-icons/hi";
 import router from "next/router";
 
 const MobileMenuDropContainer = styled.div`
@@ -19,9 +17,8 @@ const MobileMenuDropContainer = styled.div`
 `;
 
 const MobileMenuDrop = () => {
-    const theme = useContext(ThemeContext);
     return (
-        <MobileMenuDropContainer theme={theme}>
+        <MobileMenuDropContainer>
         {NavBarMenus.map((menu) => (
             <div style={{ borderColor: menu.color }} key={menu.route}>
             <div onClick={()=>router.push(menu.route)} style={{ color: menu.color }}>{menu.title}</div>

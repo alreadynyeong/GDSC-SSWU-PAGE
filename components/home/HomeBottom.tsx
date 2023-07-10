@@ -1,6 +1,6 @@
 import { Mobile, PC } from "@/hook/responsive";
-import React, { useContext } from "react";
-import styled, { ThemeContext } from "styled-components";
+import React from "react";
+import styled from "styled-components";
 
 const Container = styled.div`
     height: 690px;
@@ -72,17 +72,16 @@ const MobileSquareImage = styled.div`
 `
 
 const HomeBottom = () => {
-    const theme = useContext(ThemeContext);
     return (
         <>
         <PC>
-            <Container theme={theme}>
+            <Container>
                 <ContentBox>
                     <ImageContainer>
                         <img src={`https://alreadynyeong.github.io/GDSC-SSWU-PAGE/Photo/Highlight2.jpeg`} alt={""} width={328} height={335}/>
                     </ImageContainer>
                     <TextBox>
-                        <Title theme={theme}>HIGHLIGHT</Title>
+                        <Title>HIGHLIGHT</Title>
                         <p>GDSC 성신여대에서는 GDSC SSWU뿐만 아니라 GDG, GDSC 주최의 다양한 행사에 참여합니다.</p>
                     </TextBox>
                 </ContentBox>

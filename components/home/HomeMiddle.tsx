@@ -1,5 +1,5 @@
-import React, { useContext, useState } from "react";
-import styled, { CSSProp, ThemeContext } from 'styled-components';
+import React, { useState } from "react";
+import styled from 'styled-components';
 import HomeImage from "@/public/Home/HomeImage.svg"
 import HomeImage2 from "@/public/Home/HomeImage2.svg"
 import HomeImage3 from "@/public/Home/HomeImage3.svg"
@@ -14,7 +14,7 @@ interface PickCircleProps {
 const Container = styled.div`
     height: 680px;
     background-color: ${(props) => props.theme.green};
-    
+
     text-align: center;
     overflow: scroll;
 `
@@ -72,11 +72,10 @@ const MobilePartBox = styled.div`
 
 const HomeMiddle = () => {
     const [pick, setPick] = useState<number>(0);
-    const theme = useContext(ThemeContext);
     return (
-        <Container theme={theme}>
+        <Container>
             <PC>
-                <Title theme={theme}>WE STUDY ABOUT..</Title>
+                <Title>WE STUDY ABOUT..</Title>
                 <PartBox>
                     {HomeParts.map((p, index) => (
                         <Part key={p.title}>

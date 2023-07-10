@@ -7,13 +7,10 @@ import { Mobile, PC } from "@/hook/responsive";
 const Container = styled.div`
   height: 590px;
   overflow: scroll;
-  background-color: ${(props) => props.theme.backGroundColor};
-  color: ${(props) => props.theme.textColor};
   padding: 50px;
 `;
 const Contents = styled.div`
     margin: 0 auto;
-    // border: 1px solid red;
     width: fit-content;
     height: fit-content;
     display: flex;
@@ -23,7 +20,6 @@ const ImageContainer = styled.div`
     width: 411px;
     height: 335px;
     border-radius: 0px 0px 0px 106px;
-    // border: 1px solid red;
     overflow: hidden;
     margin-left: 100px;
 `
@@ -76,7 +72,7 @@ const HomeTop = () => {
     return (
         <>
             <PC>
-                <Container theme={theme}>
+                <Container>
                 <Contents>
                     <div>
                         <GDSC/>

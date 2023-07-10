@@ -1,6 +1,5 @@
-import React, { useContext } from "react";
-import styled, { ThemeContext } from "styled-components";
-import Link from "next/link";
+import React from "react";
+import styled from "styled-components";
 import { TEAMS } from "@/data/Teams";
 import { Mobile, PC } from "@/hook/responsive";
 import { useRouter } from "next/router";
@@ -40,7 +39,6 @@ const TeamName = styled.div`
     width: fit-content; 
     margin: 0 auto;
     padding: 10px;
-    color: ${(props) => props.theme.textColor};
 `
 const TeamMember = styled.div`
     width: fit-content; 
@@ -61,7 +59,6 @@ const MobileTeamName = styled.div`
 const MobileTeamMember = styled.div`
     width: fit-content; 
     margin: 0 auto;
-    color: ${(props) => props.theme.textColor};
     margin-bottom: 40px;
 `
 const MobileTitle = styled.h2`
@@ -71,7 +68,6 @@ const MobileTitle = styled.h2`
     margin-bottom: 30px;
 `
 const List = () => {
-    const theme = useContext(ThemeContext);
     const router = useRouter();
     return(
         <Container>
@@ -79,7 +75,7 @@ const List = () => {
             <Title>OUT PRODUCT</Title>
             <Items>
                 {TEAMS.map((t)=>(
-                        <ItemContainer onClick={()=>router.push(`/project/${t.team}`)} theme={theme}>
+                        <ItemContainer onClick={()=>router.push(`/project/${t.team}`)}>
                             <TeamImage>
                                 <img src={`https://alreadynyeong.github.io/GDSC-SSWU-PAGE/Teams/${t.team}1.png`} alt={""} width={250} height={309}/>
                             </TeamImage>
@@ -94,7 +90,7 @@ const List = () => {
             <MobileTitle>OUT PRODUCT</MobileTitle>
             <Items>
                 {TEAMS.map((t)=>(
-                        <MobileItemContainer onClick={()=>router.push(`/project/${t.team}`)} theme={theme}>
+                        <MobileItemContainer onClick={()=>router.push(`/project/${t.team}`)}>
                             <div>
                                 <img src={`https://alreadynyeong.github.io/GDSC-SSWU-PAGE/Teams/${t.team}1.png`} alt={""} width={200} height={259}/>
                             </div>

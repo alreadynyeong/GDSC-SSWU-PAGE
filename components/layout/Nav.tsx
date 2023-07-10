@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import SSWU from "@/public/Logo/SSWU.svg";
 import SSWUdark from "@/public/Logo/SSWUdark.svg";
-import Link from "next/link";
 import { Mobile, PC } from "@/hook/responsive";
 import { HiMenu, HiX } from "react-icons/hi";
 import { FiMoon, FiSun } from "react-icons/fi";
@@ -87,7 +86,7 @@ const Nav = ({ toggleTheme, darkMode }: any) => {
 
   return (
     <>
-      <Container theme={theme}>
+      <Container>
         <GlobalStyle />
         <Logo>
           {darkMode ? (

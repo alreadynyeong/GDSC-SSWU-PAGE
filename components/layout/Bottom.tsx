@@ -1,6 +1,5 @@
-import React, { useContext } from "react";
+import React from "react";
 import styled from "styled-components";
-import { useRouter } from "next/router";
 import { Infos } from "@/data/Info";
 
 const Container = styled.div`
@@ -8,7 +7,6 @@ const Container = styled.div`
   width: 100%;
   padding-bottom: 20px;
   background-color: ${(props) => props.theme.backgroundColor};
-  color: ${(props) => props.theme.textColor};
 `;
 const Line = styled.div`
   background-color: #696969;
@@ -25,7 +23,6 @@ const Info = styled.a`
   color: ${(props) => props.theme.textColor};
 `;
 const Bottom = () => {
-  const router = useRouter();
 
   return (
     <Container>

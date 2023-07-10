@@ -1,5 +1,5 @@
-import React, { useContext } from "react";
-import styled, { ThemeContext } from "styled-components";
+import React from "react";
+import styled from "styled-components";
 
 const Container = styled.div`
     height: fit-content;
@@ -15,7 +15,6 @@ const Title = styled.h1`
 `
 const Content = styled.p`
     max-width: 100%;    
-    // width: 600px;
     margin: 0 auto;
     white-space: pre-line
 `
@@ -27,9 +26,8 @@ interface IntroduceProps {
 const Introduce = ({ 
     title = 'Introduce Title', 
     content = 'Introduce content' }: IntroduceProps) => {
-        const theme = useContext(ThemeContext);
     return(
-        <Container theme={theme}>
+        <Container>
             <Title>{title}</Title>
             <Content>{content}</Content>
         </Container>
