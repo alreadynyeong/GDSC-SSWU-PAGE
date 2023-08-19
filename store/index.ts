@@ -7,7 +7,7 @@ const rootReducer = (state: any, action: AnyAction): CombinedState<any> => {
     case HYDRATE:
       return { ...state, ...action.payload };
     default: {
-      const combinedReducer = combineReducers();
+      const combinedReducer = combineReducers({});
       return combinedReducer(state, action);
     }
   }
